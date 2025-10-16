@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Card from '../components/Card'
+import CardContainer from "../components/CardContainer";
 
 export default function Home()
 {
@@ -17,12 +18,12 @@ export default function Home()
     return(
     <div>
         <h1 className="text-3xl font-bold text-center mb-8">Monsters</h1>
-
-        <>
-        {mhMonsters.map(getItem => (
-            <Card key={getItem.id} {...getItem}/>
-        ))}
-        </>
+         
+        <CardContainer>
+            {mhMonsters.map(getItem => (
+                <Card key={getItem.id} {...getItem}/>
+            ))}
+        </CardContainer>
     </div>
     );
 }
