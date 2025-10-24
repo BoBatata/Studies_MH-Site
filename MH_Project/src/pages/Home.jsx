@@ -9,7 +9,7 @@ export default function Home()
     const API = import.meta.env.VITE_GITHUB_API;
 
     useEffect(() => {
-        fetch(`https://mhw-db.com/monsters`)
+        fetch(`${API}monsters`)
         .then(res => res.json())
         .then(data => {setMhMonsters(data)})
 
